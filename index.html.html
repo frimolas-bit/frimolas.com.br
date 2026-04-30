@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frimolas | Molas Industriais</title>
+  <meta name="description" content="Fabricante de molas industriais com alta precisão e qualidade. Soluções personalizadas.">
+  <link rel="icon" href="logotipo Frimolas.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+    body{background:#0b1d2a;color:#fff;overflow-x:hidden}
+
+    header{
+      position:fixed;top:0;width:100%;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 40px;
+      background:rgba(6,19,29,0.7);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,0.05);
+      z-index:1000;
+    }
+
+    .logo{height:70px;transition:.3s}
+    .logo:hover{transform:scale(1.05)}
+
+    nav a{margin:0 12px;color:#ccc;text-decoration:none;transition:.3s}
+    nav a:hover{color:#fff}
+
+    .btn{background:#2f6fed;padding:10px 18px;border-radius:6px;color:#fff;text-decoration:none;transition:.3s}
+    .btn:hover{background:#1e4ed8}
+
+    section{padding:100px 60px}
+
+    .hero{
+      min-height:90vh;display:flex;align-items:center;
+      background:linear-gradient(to right,#0b1d2a,rgba(11,29,42,.5)),url('ChatGPT Image 28 de abr. de 2026, 16_22_11.png') center/cover;
+      animation:fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1}}
+
+    h2{font-size:48px}
+    h2 span{color:#2f6fed}
+
+    .filters{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+    .filter-btn{padding:8px 16px;background:#06131d;border-radius:20px;cursor:pointer;color:#ccc;transition:.3s}
+    .filter-btn.active,.filter-btn:hover{background:#2f6fed;color:#fff}
+
+    .grid{display:grid;gap:30px}
+    .products-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:40px}
+
+    .product-card{
+      background:rgba(255,255,255,.05);
+      border-radius:12px;overflow:hidden;
+      transition:.4s;position:relative;
+    }
+    .product-card:hover{transform:translateY(-10px) scale(1.02)}
+
+    .product-image{height:200px;background-size:cover;background-position:center}
+    .img-compressao{background-image:url('ChatGPT Image 29 de abr. de 2026, 17_22_37.png')}
+    .img-tracao{background-image:url('ChatGPT Image 29 de abr. de 2026, 17_25_09.png')}
+    .img-torcao{background-image:url('ChatGPT Image 29 de abr. de 2026, 17_23_46.png')}
+    .img-especiais{background-image:url('ChatGPT Image 29 de abr. de 2026, 17_27_06.png')}
+
+    .product-content{padding:20px}
+    .product-content p{color:#bbb;font-size:14px}
+
+    .whatsapp{
+      position:fixed;bottom:20px;right:20px;
+      background:#25D366;color:#fff;
+      padding:15px 18px;border-radius:50px;
+      text-decoration:none;font-weight:bold;
+      box-shadow:0 10px 25px rgba(0,0,0,.3);
+    }
+
+    footer{text-align:center;padding:30px;background:#040b12;color:#777}
+
+    @media(max-width:900px){section{padding:80px 20px}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <img src="logotipo Frimolas.png" class="logo">
+    <span style="color:#2f6fed;font-weight:600;font-size:16px;">Molas que movem o seu negócio</span>
+  </div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#contato">Contato</a>
+    <a href="#contato" class="btn">Orçamento</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>FORÇA QUE <br><span>MOVE SOLUÇÕES</span></h2>
+    <p>Molas industriais com precisão, tecnologia e alto desempenho.</p>
+  </div>
+</section>
+
+<section id="produtos">
+  <h2>Catálogo Premium</h2>
+
+  <div class="filters">
+    <div class="filter-btn active" onclick="filter('all')">Todos</div>
+    <div class="filter-btn" onclick="filter('compressao')">Compressão</div>
+    <div class="filter-btn" onclick="filter('tracao')">Tração</div>
+    <div class="filter-btn" onclick="filter('torcao')">Torção</div>
+    <div class="filter-btn" onclick="filter('especiais')">Especiais</div>
+  </div>
+
+  <div class="grid products-grid">
+
+    <div class="product-card compressao">
+      <div class="product-image img-compressao"></div>
+      <div class="product-content">
+        <h4>Mola de Compressão</h4>
+        <p>Alta resistência e precisão industrial.</p>
+        <a href="https://wa.me/5522998367626?text=Quero%20orçamento%20Mola%20de%20Compressão" class="btn">Orçamento</a>
+      </div>
+    </div>
+
+    <div class="product-card tracao">
+      <div class="product-image img-tracao"></div>
+      <div class="product-content">
+        <h4>Mola de Tração</h4>
+        <p>Força de retorno com durabilidade.</p>
+        <a href="https://wa.me/5522998367626?text=Quero%20orçamento%20Mola%20de%20Tração" class="btn">Orçamento</a>
+      </div>
+    </div>
+
+    <div class="product-card torcao">
+      <div class="product-image img-torcao"></div>
+      <div class="product-content">
+        <h4>Mola de Torção</h4>
+        <p>Projetadas para torque e rotação.</p>
+        <a href="https://wa.me/5522998367626?text=Quero%20orçamento%20Mola%20de%20Torção" class="btn">Orçamento</a>
+      </div>
+    </div>
+
+    <div class="product-card especiais">
+      <div class="product-image img-especiais"></div>
+      <div class="product-content">
+        <h4>Molas Especiais</h4>
+        <p>Projetos sob medida para sua aplicação.</p>
+        <a href="https://wa.me/5522998367626?text=Quero%20orçamento%20Especial" class="btn">Orçamento</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/5522998367626">WhatsApp</a>
+
+<footer>
+  <p>© 2026 Frimolas - Todos os direitos reservados</p>
+</footer>
+
+<script>
+function filter(type){
+  let cards=document.querySelectorAll('.product-card');
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  cards.forEach(card=>{
+    if(type==='all'||card.classList.contains(type)){
+      card.style.display='block';
+    }else{
+      card.style.display='none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
